@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Dua List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Rose:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f6fdf6;
+        min-height: 100vh;
+        margin-top: 30px;
+       
+        
+    }
+    h2{
+        font-size: 25px ;
+    }
+    .dua-card h2 {
+        margin-top: 0;
+        color: #333;
+}
+    h1 {
+        font-family: 'Playfair display', serif;
+        text-align: center;
+        color: #2E7D32;
+        margin-bottom: 30px;
+}
+    .content{
+        background-color: #fff; 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        min-height: 200px;
+        
+        margin: auto;
+        border-radius: 10px;
+        border-left: 6px solid #2E7D32;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    .category, .timestamp {
+        color: #666;
+        font-size: 0.9em;
+}
+        .cont {
+        line-height: 1.6;
+        }
+.actions{
+    text-align: right;
+}
+.actions a{
+    text-decoration: none;
+    background-color: #2E7D32;
+    padding: 10px 18px ;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.95em;
+    transition: background-color 0.3s;
+}
+.actions a:hover{
+    background-color: #256528;
+}
+</style>
+<body>
+   <div class="container-fluid">
+        <h1><i class="fas fa-book-open"></i> My Duas</h1>
+        <div class="row">
+            <div class="col-md-8 content">
+                <h2><i class="fas fa-star-and-crescent"></i> Gratitude after Prayer</h2>
+                <p class="category"><i class="fas fa-tag"></i> Category: Gratitude</p>
+                <p class="cont">
+                    Ya Allah, thank You for the strength to worship, for the peace in my heart after Salah...
+                </p>
+                <p class="timestamp"><i class="fas fa-clock"></i> Created on: April 21, 2025</p>
+               <div class="actions">
+                <a href="duadetail.html">View Dua</a> 
+               </div>     
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-md-8 content">
+                <h2><i class="fas fa-hands"></i> Seeking Forgiveness</h2>
+                <p class="category"><i class="fas fa-tag"></i> Category: Forgiveness</p>
+                <p class="cont">
+                    Ya Rabb, forgive me for my shortcomings, the known and unknown, and draw me closer to Your mercy...
+                </p>
+                <p class="timestamp"><i class="fas fa-clock"></i> Created on: April 18, 2025</p>
+                <div class="actions">
+                    <a href="duadetail.html">View Dua</a> 
+                </div>
+            </div>
+        </div>
+       
+       
+   </div> 
+</body>
+</html>
