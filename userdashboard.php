@@ -1,13 +1,16 @@
 <?php
 session_start();
+
+
 require_once "classes/Register.php";
+require_once "userguard.php";
 
 $dashboard1 = new Register;
 $dashboard2 = $dashboard1->userDashboard($_SESSION['user_id']);
 
-echo "<pre>";
-print_r($dashboard2);
-echo "</pre>";
+// echo "<pre>";
+// print_r($dashboard2);
+// echo "</pre>";
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +88,7 @@ echo "</pre>";
                 <a href="viewdua.html">Dua List</a>
             </div>
             <div class="col-md-2">
-                <a href="" class="btn mb-3">Sign Out</a>
+                <a href="signout.php" class="btn mb-3">Sign Out</a>
             </div>
         </div>
         <div class="row">

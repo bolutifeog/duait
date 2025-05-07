@@ -8,10 +8,17 @@ if(isset($_POST['btn'])){
     $password = $_POST['pwd'];
 
     $signin1 = new Register;
-    $signin2 = $signin1->signIn($email, $password); // $signin2 is the full user array now
+    $signin2 = $signin1->signIn($email, $password); 
+
+    // var_dump($signin2);
+    // exit;
+
 
     if($signin2){
-        $_SESSION['user_id'] = $signin2['user_id']; // ✅ this will now work
+        // I stored all user's data here for easy accessibility.
+        $_SESSION['user_id'] = $signin2['user_id']; 
+        $_SESSION['username'] = $signin2['username'];
+        $_SESSION['email'] = $signin2['user_email'];
         header("location:../userdashboard.php");
         exit();
     } else {

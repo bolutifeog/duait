@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Rose:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-color: #f8f9fa;
+    }
+    .sidebar{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #343a40;
+       
+      
+    }
+    .sidebar a{
+        text-decoration: none;
+        padding: 10px;
+        color: white;
+        border-bottom:  1px solid #495057;
+        
+    }
+    .sidebar a:hover{
+        background-color: #495057;
+    }
+     .card-box{
+        min-height: 120px;
+       border-radius: 5px;
+       padding: 20px;
+       color: #fff
+    }
+    .card{
+      margin-top: 20px; 
+    }
+   
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 sidebar">
+                
+                    <h5 style="color: #f8f9fa;" class="mt-3 text-center">Admin Panel</h5>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="users.html">Manage Users</a>
+                    <a href="duas.html">Manage Du'as</a>
+                    <a href="categories.html">Categories</a>
+                    <a href="#">Settings</a>
+                    <a href="signout.html">Signout</a>
+                
+            </div>
+            <div class="col-md-10">
+                <h2 class="mt-5">Dashboard</h2>
+                <hr>
+               
+                
+                    <div class="row g-4 addspace">
+                        <div class="col-md-4">
+                          <div class="bg-primary card-box">
+                            <h5>Total Users</h5>
+                            <p class=" display-6">120</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="bg-success card-box">
+                            <h5>Total Duas</h5>
+                            <p class=" display-6">250</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="bg-warning card-box" style="color: #343a40;">
+                            <h5>Categories</h5>
+                            <p class=" display-6" >15</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="card">
+                            <div>
+                                <h5>Recent Duas</h5>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                           <th>S/N</th>
+                                           <th>Fullname</th>
+                                           <th>Dua Title</th>
+                                           <th>Category</th>
+                                           <th>Date Added</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Shukroh Boluwatife</td>
+                                        <td>Supplication for Emotional healing</td>
+                                        <td>Healing</td>
+                                        <td>25-05-06</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Maryam Nofiu</td>
+                                        <td>Dua for mercy and forgiveness</td>
+                                        <td>Istighfar</td>
+                                        <td>25-05-07</td>
+                                    </tr>
+                                </table>
+                            </div>
+                       </div>
+            </div>
+           
+        </div>
+        
+    </div>
+</body>
+</html>

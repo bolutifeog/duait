@@ -29,7 +29,7 @@
                 $check = password_verify($password, $hashed);
 
                 if($check){
-                    return $saved['user_id'];
+                    return $saved;
                 }else{
                     $_SESSION['errormsg']= "Incorrect Password";
                     return false;
@@ -40,13 +40,18 @@
                 return false;
             }
         }
-
-        public function userDashboard($id){
+        
+        public function userDashboard($id){ 
             $sql= "SELECT * FROM users WHERE user_id=?";
             $stmt = $this->dbconn->prepare($sql);
             $stmt->execute([$id]);
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             return $result;
+        }
+
+        public function signOut(){
+            session_unset();
+            session_destroy();
         }
     }
     // $signup = new Register;
