@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,8 +64,21 @@
             <div class="col-md-4 duait">
                 <h2>🌙 Welcome Back to DuaIt</h2>
                 <p class="quote">“Never stop making du’a, for what you seek is seeking you.”</p>
+                <?php
+                    	if(isset($_SESSION['errormsg'])){
+                            echo "<div class='alert alert-danger'>". $_SESSION['errormsg']."</div>";
+                            unset($_SESSION['errormsg']);
+                          }
+        
+                          if(isset($_SESSION['feedback'])){
+                            echo "<div class='alert alert-success'>". $_SESSION['feedback']."</div>";
+                            unset($_SESSION['feedback']);
+                          }
+                        
+                        ?>
+                
 
-                <form action="" method="post">
+                <form action="process/process.signin.php" method="post">
                    
                     <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your E-mail">
                     <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Enter Password">
@@ -70,7 +87,7 @@
     
                 </form>
                 <div>
-                    <p>New here? <a href="signup.html">Create an account</a></p>
+                    <p>New here? <a href="index.php">Create an account</a></p>
                 </div>
                 <footer>
                     <p>&copy; 2025 DuaIt. All rights reserved.</p>

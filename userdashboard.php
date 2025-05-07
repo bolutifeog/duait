@@ -1,3 +1,15 @@
+<?php
+session_start();
+require_once "classes/Register.php";
+
+$dashboard1 = new Register;
+$dashboard2 = $dashboard1->userDashboard($_SESSION['user_id']);
+
+echo "<pre>";
+print_r($dashboard2);
+echo "</pre>";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,7 +90,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 content">
-                <h2>Assalamu Alaikum, Boluwatife 🌸</h2>
+                <h2>Assalamu Alaikum, <?php echo $dashboard2['username'] ?> 🌸</h2>
                 <p class="reminder">“Remember Allah much, that you may succeed.” <em>(Qur’an 62:10)</em></p>
             </div>
         </div>

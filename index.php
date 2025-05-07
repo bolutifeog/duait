@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,11 +65,29 @@
                 <h2 class="dua">DuaIt</h2>
                 <p>Begin your heartfelt journey with Allah 🤲🏽</p>
 
-                <form action="" method="post">
+                <?php
+					if(isset($_SESSION['errormsg'])){
+						echo "<div class='alert alert-danger'>". $_SESSION['errormsg']."</div>";
+						unset($_SESSION['errormsg']);
+					  }
+	
+					  if(isset($_SESSION['feedback'])){
+						echo "<div class='alert alert-success'>". $_SESSION['feedback']."</div>";
+						unset($_SESSION['feedback']);
+					  }
+					
+					?>
+
+                <form action="process/process.signup.php" method="post">
                     <input type="text" name="fullname" class="form-control" placeholder="Enter Your Fullname" value="">
+
                     <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your E-mail">
+
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Enter Your Username">
+
                     <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Enter Password">
                     <input type="password" name="confirm-pwd" id="confirm-pwd" class="form-control" placeholder="Confirm Password">
+
                     <button type="submit" name="btn" class="bttn">Create Account</button>
     
                 </form>
