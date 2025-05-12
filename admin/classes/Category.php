@@ -10,7 +10,7 @@
         }
 
 
-        public function addCategory()
+       
     }
 
 ?>
