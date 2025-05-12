@@ -1,3 +1,7 @@
+<?php
+  require_once "adminguard.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +64,7 @@
         <div class="row mt-5">
             <div class="col-md-12 admin">
                 <h5>Admin Categories</h5>
-                <a href="#" class="btnn"><i class="fas fa-plus"></i>Add New Category</a>
+                <a href="addcat.php" class="btnn"><i class="fas fa-plus"></i>Add New Category</a>
             </div>
         </div>
         <div class="row">
@@ -79,7 +83,7 @@
                    <a href="duas.html">Manage Duas</a> 
                    <a href="categories.html">Categories</a> 
                    <a href="#">Settings</a>
-                   <a href="signout.html">Signout</a> 
+                   <a href="signout.php">Signout</a> 
                 </ul>
             </div>
             <div  class="col-md-10">

@@ -1,3 +1,7 @@
+<?php
+  require_once "adminguard.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,12 +125,12 @@
         </div>
   
         <h5 class="text-center">Admin Panel</h5>
-        <a href="dashboard.html" class="hideOnMobile">Dashboard</a>
-        <a href="users.html" class="hideOnMobile">Manage Users</a>
-        <a href="duas.html" class="hideOnMobile">Manage Du'as</a>
-        <a href="categories.html" class="hideOnMobile">Categories</a>
+        <a href="dashboard.php" class="hideOnMobile">Dashboard</a>
+        <a href="users.php" class="hideOnMobile">Manage Users</a>
+        <a href="duas.php" class="hideOnMobile">Manage Du'as</a>
+        <a href="categories.php" class="hideOnMobile">Categories</a>
         <a href="#" class="hideOnMobile">Settings</a>
-        <a href="signout.html" class="hideOnMobile">Signout</a>
+        <a href="signout.php" class="hideOnMobile">Signout</a>
       </div>
 
       <!-- Main content -->

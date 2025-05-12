@@ -1,3 +1,7 @@
+<?php
+    session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +65,20 @@
                 <h2>🌙 Welcome Admin</h2>
                 <p class="quote">“Never stop making du’a, for what you seek is seeking you.”</p>
 
-                <form action="" method="post">
+                <?php
+                    	if(isset($_SESSION['errormsg'])){
+                            echo "<div class='alert alert-danger'>". $_SESSION['errormsg']."</div>";
+                            unset($_SESSION['errormsg']);
+                          }
+        
+                          if(isset($_SESSION['feedback'])){
+                            echo "<div class='alert alert-success'>". $_SESSION['feedback']."</div>";
+                            unset($_SESSION['feedback']);
+                          }
+                        
+                        ?>
+
+                <form action="process/process.adminsignin.php" method="post">
                    
                     <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your E-mail">
                     <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Enter Password">
