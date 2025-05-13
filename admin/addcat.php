@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,23 +63,33 @@
         <div class="row">
             <div class="col-md-12">
                 <h2 class="text-center">Add Dua Category</h2>
-                <form action="" method="post">
+                <?php
+                    	if(isset($_SESSION['errormsg'])){
+                            echo "<div class='alert alert-danger'>". $_SESSION['errormsg']."</div>";
+                            unset($_SESSION['errormsg']);
+                          }
+        
+                          if(isset($_SESSION['feedback'])){
+                            echo "<div class='alert alert-success'>". $_SESSION['feedback']."</div>";
+                            unset($_SESSION['feedback']);
+                          }
+                        
+                        ?>
+                <form action="process/process.addcat.php" method="post">
                     <div class="form-group">
                         <label for="name">Category Name</label>
                         <input type="text" name="category" id="category" class="form-control" placeholder="Name">
                     </div>
 
                     <div class="form-group mt-3">
-                        <label for="staus">Status</label>
-                        <select name="status" id="status" class="form-control">
-                            <option value="">Active</option>
-                            <option value="">Inactive</option>
-                        </select>
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" class="form-control"></textarea>
+                       
                     </div>
                     
 
                     <div class="form-group mt-3 d-flex gap-5">
-                        <button type="submit" class="btnn">Add Category</button>
+                        <button type="submit" class="btnn" name="btnn">Add Category</button>
                         <a href="cancel.php">Cancel</a>
                     </div>
 

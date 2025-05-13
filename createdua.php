@@ -1,3 +1,11 @@
+<?php
+    require_once "admin/classes/Category.php";
+
+    $fetAllCat = new Category;
+    $Categories = $fetAllCat->fetchAllCategory();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,10 +103,14 @@
                         <label for="category"><i class="fas fa-tags "></i> Category</label>
                         <select id="category" name="category" class="form-control"required>
                         <option value="">-- Select Category --</option>
-                        <option value="1">Gratitude</option>
-                        <option value="2">Forgiveness</option>
-                        <option value="3">Healing</option>
-                        <option value="4">Guidance</option>
+                        <?php
+                            foreach($Categories as $cat){
+                                ?>
+                                <option value="<?php echo $cat['cat_id'] ;?>"><?php echo $cat['cat_name']; ?></option>
+
+                                <?php
+                            }
+                        ?>
                         </select>
                     
                         <label for="content"><i class="fas fa-feather-alt"></i> Dua Content</label>

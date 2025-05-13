@@ -1,5 +1,10 @@
 <?php
+  require_once "classes/Category.php";
   require_once "adminguard.php";
+
+  $fetAllCat = new Category;
+  $Categories = $fetAllCat->fetchAllCategory();
+
 ?>
 
 <!DOCTYPE html>
@@ -154,7 +159,7 @@
           <div class="col-md-4">
             <div class="bg-warning card-box" style="color: #343a40;">
               <h5>Categories</h5>
-              <p class="display-6">15</p>
+              <p class="display-6"><?php echo count($Categories) ?></p>
             </div>
           </div>
         </div>
